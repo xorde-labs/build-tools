@@ -6,7 +6,7 @@ if [ -z ${QT_VERSION+x} ]; then
 fi
 
 if [ -z ${QT_SOURCE_DIR+x} ]; then
-  echo "QT_VERSION variable is not set. Aborting..."
+  echo "QT_SOURCE_DIR variable is not set. Aborting..."
   exit 1
 fi
 
