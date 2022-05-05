@@ -11,9 +11,13 @@ cd "${QT_SOURCE_DIR}" || exit 1
 # https://github.com/qt/qtbase/blob/4088b27b9397fa9877bf60b8e707bba5dc51e9cb/config_help.txt
 # for configure parameters
 
-# This produces error too:
-# ./configure -c++std 17 -platform linux-g++ -opensource -confirm-license -nomake examples -nomake tests
+# We don't need qtdocgallery because it produces error. More info:
+# https://bugreports.qt.io/browse/QTBUG-82690
 
-./configure -opensource -confirm-license -nomake examples -nomake tests
+./configure -opensource -release -confirm-license \
+  -ccache \
+  -nomake examples -nomake tests -skip qtdocgallery
 
 make -j4
+
+make install

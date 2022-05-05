@@ -11,7 +11,8 @@ RUN apt-get -y update && apt-get -y upgrade && \
       git wget build-essential software-properties-common xvfb flex dh-make debhelper checkinstall fuse bison
 
 RUN apt-get -y install \
-    libxcursor-dev libxcomposite-dev libssl-dev libxcb1-dev libx11-dev libgl1-mesa-dev libudev-dev libclang-dev
+    libxcursor-dev libxcomposite-dev libssl-dev libxcb1-dev libx11-dev libgl1-mesa-dev libudev-dev libclang-dev \
+    freeglut3-dev mesa-common-dev
 
 COPY scripts/sources.sh .
 
