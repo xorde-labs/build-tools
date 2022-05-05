@@ -15,7 +15,6 @@ cd "${QT_SOURCE_DIR}" || exit 1
 # https://bugreports.qt.io/browse/QTBUG-82690
 
 ./configure -opensource -release -confirm-license \
-  -ccache \
   -nomake examples -nomake tests -skip qtdocgallery
 
 make -j4
