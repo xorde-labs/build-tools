@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Ubuntu 18.04 Qt5
 
 on:
   workflow_dispatch:
