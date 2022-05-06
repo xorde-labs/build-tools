@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER Xander Tovski <xt@xorde.co>
 
 ENV LC_ALL C.UTF-8
@@ -7,7 +7,7 @@ ENV QT_VERSION=5.15.2
 ENV QT_SOURCE_DIR=qt5
 
 RUN apt-get -y update && apt-get -y upgrade && \
-    apt-get -y install \
+    TZ=GMT DEBIAN_FRONTEND=noninteractive apt-get -y install \
       git wget build-essential software-properties-common xvfb flex dh-make debhelper checkinstall fuse bison
 
 RUN apt-get -y install \
