@@ -1,4 +1,4 @@
-name: Build and push Qt5 on Ubuntu 20.04
+name: Qt5 on Ubuntu 20.04
 
 on:
   workflow_dispatch:
